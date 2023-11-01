@@ -172,3 +172,234 @@ Na primeira linha deve ser lido o número inteiro N, que é referente à quantid
 **Output Format:**
 
 Imprimir o resultado da soma dos fatores de balanceamento de todos os nós da árvore.
+
+# Árvore rubro-negra - contar nós pretos ímpares
+Implemente uma função que receba uma árvore rubro-negra. A função deverá retornar a quantidade de nós pretos que contém valor ímpar.
+
+**Input Format:**
+
+Na primeira linha deve ser lido o número inteiro N, que é referente à quantidade de nós da árvore. Em seguida, em cada linha deve ser lido um número inteiro para ser inserido como nó na árvore (fazer isso até que N números sejam lidos).
+
+**Output Format:**
+
+Quantidade de nós pretos ímpares
+
+# Árvore B - contagem de páginas cheias
+Implemente uma função que receba uma árvore B de ordem 5. A função deverá retornar um número inteiro representado a quantidade de páginas cheias.
+
+**Input Format:**
+
+Na primeira linha deve ser lido o número inteiro N, que é referente à quantidade de chaves que serão alocadas na árvore. Em seguida, em cada linha deve ser lido um número inteiro para ser inserido na árvore (fazer isso até que N números sejam lidos).
+
+**Output Format:**
+
+Imprimir o número de páginas cheias.
+
+# Árvore B - Média entre todas as páginas folhas
+Implemente uma função que receba uma árvore B de ordem 5. A função deverá retornar um número inteiro representado valor médio entre os elementos de todas as páginas folhas.
+
+**Input Format:**
+
+Na primeira linha deve ser lido o número inteiro N, que é referente à quantidade de chaves que serão alocadas na árvore. Em seguida, em cada linha deve ser lido um número inteiro para ser inserido na árvore (fazer isso até que N números sejam lidos).
+
+**Output Format:**
+
+Imprimir a média dos valores da chave.
+
+# Grafos - lista de adjacência para matriz de adjacência
+Implemente uma função que receba um grafo representado por uma lista de adjacência e o converta para uma matriz de adjacência.
+
+**Input Format:**
+
+A primeira linha contém o número de vértices seguida pela respectiva lista de adjacência.
+
+Nas próximas linhas, onde cada uma é referente a um vértice v_i, enquanto o número "-1" (menos um) não for lido, ler os vértices adjacentes.
+
+Por exemplo, suponha que o i-ésimo vértice seja adjacente aos vértices 2 e 5, então a leitura deve seguir o seguinte formato:
+
+2 5 -1
+
+Caso o vértice não tenha adjacentes, basta ler -1 (menos 1). Exemplo:
+
+-1
+
+**Output Format:**
+
+Matriz de adjacência impressa.
+
+# Grafos - direcionado ou não direcionado
+Implemente uma função que receba um grafo representado por uma lista de adjacência e verifique se é direcionado ou não.
+
+**Input Format:**
+
+A primeira linha contém o número de vértices seguida pela respectiva lista de adjacência. Cada uma das seguintes linhas será referente a um vértice v_i, onde os vértices adjacentes devem ser lidos. Para cada linha, enquanto o número "-1" (menos um) não for lido, um vértice adjacente deve ser lido. Por exemplo, suponha que o i-ésimo vértice seja adjacente aos vértices 2 e 5, então a leitura deve seguir o seguinte formato:
+
+2 5 -1
+
+Caso o vértice não tenha adjacentes, basta ler -1 (menos 1). Exemplo:
+
+-1
+
+**Output Format:**
+
+Imprimir direcionado ou nao direcionado
+
+# Grafos - busca em largura (listas de adjacências)
+Implemente o algoritmo de busca em largura para grafos. Esse algoritmo deve ter dois parâmetros: um grafo e um número inteiro, sendo este último o vértice raiz da árvore de busca em largura, ou seja, é o vértice a partir de onde deve ser iniciado a exploração do grafo. Após, para cada vértice, imprima os respectivos pai e distância.
+
+Para a implementação, considere o grafo representado por lista de adjacências, conforme as estruturas apresentadas abaixo:
+
+    typedef struct {
+        int V; // número de vértices
+        int A; // número de arestas
+        Lista **adj; // lista de adjacências
+    }GrafoLA;
+
+    typedef struct Cell Cell;
+
+    struct Cell{
+        int key;
+        Cell *next;
+    };
+    
+    typedef struct{
+        Cell *head;
+    }Lista;
+**Input Format:**
+
+A primeira linha contém o número de vértices seguida pela respectiva lista de adjacência. Cada uma das seguintes linhas será referente a um vértice v_i, onde os vértices adjacentes devem ser lidos. Para cada linha, enquanto o número "-1" (menos um) não for lido, um vértice adjacente deve ser lido. Por exemplo, suponha que o i-ésimo vértice seja adjacente aos vértices 2 e 5, então a leitura deve seguir o seguinte formato:
+
+2 5 -1
+
+Caso o vértice não tenha adjacentes, basta ler -1 (menos 1). Exemplo:
+
+-1
+
+Na última linha deve ser lido um número inteiro que representa um vértice do grafo para iniciar a aplicação do algoritmo de busca em largura.
+
+**Constraints:**
+
+O não uso do TAD de lista de adjacências acerratará em 75% de desconto da nota, já que a versão com matriz de adjacências é implementada em aula.
+
+**Output Format:**
+
+Na primeira linha deve ser impressa a seguinte sequência de caracteres: "v d p".
+
+A partir da próxima linha, imprimir o vértice, o pai e a distância.
+
+Para cada vértice que não tem pai, deve ser impresso "-" em sua respectiva linha.
+
+Para cada vértice que não foi possível ser descoberto a partir do "vértice raiz", também deve ser impresso o caractere "-". Por exemplo: se o vértice x não pode ser descoberto, na sua linha deve ser impresso "x - -"
+
+# Grafos - busca em profundidade (listas de adjacências)
+Implemente o algoritmo de busca em profundidade para grafos. Para a representação do grafo, você pode usar matriz ou lista de adjacências. A aplicação do algoritmo deve começar pelo vértice 0.
+
+Para a implementação, considere o grafo representado por lista de adjacências, conforme as estruturas apresentadas abaixo:
+
+    typedef struct {
+        int V; // número de vértices
+        int A; // número de arestas
+        Lista **adj; // lista de adjacências
+    }GrafoLA;
+
+    typedef struct Cell Cell;
+
+    struct Cell{
+        int key;
+        Cell *next;
+    };
+    
+    typedef struct{
+        Cell *head;
+    }Lista;
+**Input Format:**
+
+A primeira linha contém o número de vértices seguida pela respectiva lista de adjacência. Cada uma das seguintes linhas será referente a um vértice v_i, onde os vértices adjacentes devem ser lidos. Para cada linha, enquanto o número "-1" (menos um) não for lido, um vértice adjacente deve ser lido. Por exemplo, suponha que o i-ésimo vértice seja adjacente aos vértices 2 e 5, então a leitura deve seguir o seguinte formato:
+
+2 5 -1
+
+Caso o vértice não tenha adjacentes, basta ler -1 (menos 1). Exemplo:
+
+-1
+
+**Constraints:**
+
+O não uso do TAD de lista de adjacências acerratará em 75% de desconto da nota, já que a versão com matriz de adjacências é implementada em aula.
+
+**Output Format:**
+
+Na primeira linha deve ser impressa a seguinte sequência de caracteres: "v d f p".
+
+Para cada uma das próximas linhas, imprimir um vértice (em ordem crescente), o momento da sua descoberta, o momento da sua finalização e o seu respectivo pai.
+
+Para cada vértice que não tem pai, deve ser impresso "-" em sua respectiva linha.
+
+# Grafos - árvore geradora mínima (listas de adjacência)
+Implemente o algoritmo de Prim. A função deve receber um grafo representado por uma lista de adjacência e construir uma árvore geradora mínima, que deve ser construída a partir do vértice "0".
+
+Para a implementação, considere o grafo representado por lista de adjacências, conforme as estruturas apresentadas abaixo:
+   
+    typedef struct {
+        int V; // número de vértices
+        int A; // número de arestas
+        Lista **adj; // lista de adjacências
+    }GrafoLA;
+
+    typedef struct Cell Cell;
+
+    struct Cell{
+        int key;
+        Cell *next;
+    };
+    
+    typedef struct{
+        Cell *head;
+    }Lista;
+**Input Format:**
+
+A primeira linha contém o número de vértices. A segunda linha contém a quantidade de arestas (A). Para cada uma das "A" próximas linhas devem der lidos dois números inteiros. sendo os 2 primeiros, a aresta, e o último, o peso da aresta.
+
+**Constraints:**
+
+O não uso do TAD de lista de adjacências acerratará em 75% de desconto da nota, já que a versão com matriz de adjacências é implementada em aula.
+
+**Output Format:**
+
+Imprimir a árvore geradora mínima. Cada linha deve ser impressa no seguinte formato: "v_i: pai[v_i]".
+
+Para o vértice da árvore que não tiver "pai", deve ser impresso o caractere "-" (traço/sinal de menos). Como o algoritmo deve ser iniciada a partir do vértice "0", então a primeira linha sempre será "0: -"
+
+# Grafos - caminhos mínimos (listas de adjacência)
+Implemente o algoritmo de Dijkstra. A função deve receber um grafo representado por uma lista de adjacência e construir uma árvore de caminhos mínimos, que deve ser construída a partir do vértice "0".
+
+Para a implementação, considere o grafo representado por lista de adjacências, conforme as estruturas apresentadas abaixo:
+   
+    typedef struct {
+        int V; // número de vértices
+        int A; // número de arestas
+        Lista **adj; // lista de adjacências
+    }GrafoLA;
+
+    typedef struct Cell Cell;
+
+    struct Cell{
+        int key;
+        Cell *next;
+    };
+    
+    typedef struct{
+        Cell *head;
+    }Lista;
+**Input Format:**
+
+A primeira linha contém o número de vértices. A segunda linha contém a quantidade de arestas (A). Para cada uma das "A" próximas linhas devem der lidos dois números inteiros. sendo os 2 primeiros, a aresta, e o último, o peso da aresta.
+
+**Constraints:**
+
+O não uso do TAD de lista de adjacências acerratará em 75% de desconto da nota, já que a versão com matriz de adjacências é implementada em aula..
+
+**Output Format:**
+
+Imprimir a árvore de caminhos mínimos. Cada linha deve ser impressa no seguinte formato: "v_i: pai[v_i]".
+
+Para o vértice da árvore que não tiver "pai", deve ser impresso o caractere "-" (traço/sinal de menos). Como o algoritmo deve ser iniciada a partir do vértice "0", então a primeira linha sempre será "0: -"
