@@ -1,3 +1,14 @@
+# Força-bruta - problema do troco
+Implemente a solução do problema do troco (conforme apresentado em sala de aula) utilizando a estratégia de força-bruta.
+
+**Input Format:**
+
+A primeira linha deve conter o valor do troco. A segunda linha deve conter a quantidade de moedas, que representará o tamanho do vetor que deverá ser lido logo em sequência.
+
+**Output Format:**
+
+Sequência de moedas que foram retornados como troco.
+
 # Algoritimos-e-Estrutura-de-dados-2
 Códigos feito por mim durante o curso de Engenharia de Computação, na Faculdade Tecnológica do Paraná. Matéria: Algoritmos e Estruturas de Dados 2, ministrada por Jefferson Tales Oliva.
 
