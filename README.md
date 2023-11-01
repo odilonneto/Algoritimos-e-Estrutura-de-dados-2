@@ -1,5 +1,5 @@
 # Algoritimos-e-Estrutura-de-dados-2
-Códigos feito por mim durante o curso de Engenharia de Computação, na Faculdade Tecnológica do Paraná. Matéria: Algoritmos e Estruturas de Dados 2, ministrada por Jefferson Tales Oliva.
+Abaixo segue o nome e enunciado de cada exercício resolvido.
 
 # Força-bruta - problema do troco
 Implemente a solução do problema do troco (conforme apresentado em sala de aula) utilizando a estratégia de força-bruta.
